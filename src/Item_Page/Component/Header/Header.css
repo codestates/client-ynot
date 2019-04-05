@@ -1,3 +1,18 @@
 .headerWrapper {
 	display: flex;
+	position: relative;
+	left: 30%;
+}
+#hdImgWrap {
+	position: relative;
+	right: 10%;
+	width: 80px;
+	height: 40px;
+}
+.headerWrapper img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }

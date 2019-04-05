@@ -7,14 +7,14 @@ class ItemReviewDetails extends Component {
 		return (
 			<div className="review">
 				<div>
-					<img />
+					<img src={this.props.review.user.profilePhoto} />
 					<div>
-						<span>{this.props.review.id}</span>
-						<span>userlocation</span>
+						<span>{this.props.review.user.name}</span>
+						<span>{this.props.review.district}</span>
 					</div>
 				</div>
 				<div>
-					<StarRating />
+					<div>{this.props.review.averageRating}</div>
 					<span>{this.props.review.date}</span>
 					<p>{this.props.review.comment}</p>
 					<div>

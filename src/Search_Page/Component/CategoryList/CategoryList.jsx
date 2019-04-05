@@ -15,7 +15,6 @@ class CategoryList extends Component {
 	}
 
 	componentDidMount() {
-		// this.getResLocation(this.props.location);
 		fetch(`http://localhost:3002/api/restaurants/nearby?district=${this.props.location}`)
 			.then((res) => res.json())
 			.then((json) => {
@@ -43,6 +42,7 @@ class CategoryList extends Component {
 		const currentItems = restaurant.slice(indexOfFirstItem, indexOfLastItem);
 
 		const renderItems = currentItems.map((item, index) => {
+			console.log(item);
 			return (
 				<div>
 					<CategoryListDetails key={index} item={item} />

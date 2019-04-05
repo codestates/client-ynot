@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import StarRating from '../StarRating';
 import ItemMap from '../ItemMap';
 import ItemReview from '../ItemReview';
+import ItemPagePhoto from '../ItemPagePhoto/ItemPagePhoto';
 import './ItemPage.css';
 
 class ItemPage extends Component {
@@ -31,7 +32,7 @@ class ItemPage extends Component {
 				<div id="ItemPgHeader">
 					<div id="IPHtitle">
 						<h1>{review.restaurant.name}</h1>
-						<StarRating />
+						<div>{review.averageRating}</div>
 						<a href="#">food styles</a>
 					</div>
 					<div>
@@ -45,11 +46,11 @@ class ItemPage extends Component {
 					<div id="mapWrapper">
 						<ItemMap />
 					</div>
-					<div>photo</div>
+					<ItemPagePhoto review={review} />
 				</div>
 				<div>
 					<div id="revHeader">
-						<h1>Recommended Reviews for ItemName</h1>
+						<h1>Recommended Reviews for {review.restaurant.name}</h1>
 						<input />
 						<button>검색</button>
 						<span>Sort by</span>
