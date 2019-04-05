@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Searchbar from '../Searchbar';
+import Search from '../../../Main_Page/Search';
 import './Header.css';
 
 export default class Header extends Component {
@@ -7,7 +7,7 @@ export default class Header extends Component {
 		return (
 			<div className="headerWrapper">
 				<img src="https://www.yelpblog.com/wp-content/uploads/2018/08/logo.png" />
-				<Searchbar />
+				<Search />
 				<button>Log In</button>
 				<button>Sign Up</button>
 			</div>

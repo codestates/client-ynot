@@ -10,7 +10,7 @@ const CategoryListDetails = (props) => (
 			<div>
 				<div>
 					<Link to={`/item/${props.item.id}`}>{props.item.name}</Link>
-					<StarRating />
+					<div>{props.item.averageRating}</div>
 					<p>$$ British, Fish & Chips, Seafood</p>
 				</div>
 				<div>

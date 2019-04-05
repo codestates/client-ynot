@@ -101,6 +101,7 @@ class Main extends Component {
 				this.setState({
 					currentLoc: json.results[0].formatted_address.slice(11, 13)
 				});
+				console.log(json);
 			});
 	}
 	_triggerFetchRestaurantsNearby = () => {
