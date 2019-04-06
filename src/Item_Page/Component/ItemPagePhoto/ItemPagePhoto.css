@@ -1,0 +1,25 @@
+#revPhoWrapper {
+	display: flex;
+	height: 250px;
+	padding-top: 58px;
+}
+.revPho {
+	width: 220px;
+	height: 250px;
+}
+#Aphoto,
+#Cphoto {
+	position: relative;
+	bottom: 15px;
+	transition: transform .2s;
+}
+#Bphoto {
+	transition: transform .2s;
+	box-shadow: 10px 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+#Aphoto:hover,
+#Bphoto:hover,
+#Cphoto:hover {
+	transform: scale(1.2);
+	box-shadow: 10px 0 10px 0 rgba(0, 0, 0, 0.5);
+}

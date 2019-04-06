@@ -1,3 +1,44 @@
 .review {
-	border-bottom: 1px solid lightgray;
+	display: flex;
+	padding-bottom: 10px;
+	padding: 15px 0 30px 0;
+	border-top: 0.2px solid lightgray;
+}
+#user {
+	display: flex;
+}
+#userDtail {
+	position: relative;
+	left: 10px;
+}
+#userDtail a {
+	font-weight: bold;
+}
+#userImg,
+#userProf {
+	width: 60px;
+	height: 60px;
+	border-radius: 5px;
+}
+#userProf {
+}
+#comment {
+	margin: 0 20px 0 100px;
+}
+#btnDiv {
+	position: relative;
+	top: 30px;
+	margin-bottom: 30px;
+}
+#useBtn,
+#funBtn,
+#coolBtn {
+	border: 0.7px solid lightgray;
+	border-radius: 5px;
+	background-color: white;
+	color: rgb(114, 113, 113);
+	font-weight: bold;
+	width: 80px;
+	height: 35px;
+	margin-right: 10px;
 }

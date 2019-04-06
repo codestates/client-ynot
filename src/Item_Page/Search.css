@@ -1,0 +1,11 @@
+#searchInput {
+	position: relative;
+	bottom: 2px;
+	width: 400px;
+}
+#searchBtn {
+	background-color: rgb(153, 13, 13);
+	color: white;
+	border: none;
+	height: 33px;
+}

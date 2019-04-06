@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Main from './Main_Page/Main';
 import ItemPageArch from './Item_Page/ItemPageArch';
-import SearchPage from './Search_Page/Component/SeachPage';
+import SearchPage from './Search_Page/Component/SearchPage';
 import Review from './review';
 
 const App = () => {

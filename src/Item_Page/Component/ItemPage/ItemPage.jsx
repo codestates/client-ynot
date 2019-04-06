@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import StarRating from '../StarRating';
+import StarRating from '../StarRating/StarRating';
 import ItemMap from '../ItemMap';
 import ItemReview from '../ItemReview';
 import ItemPagePhoto from '../ItemPagePhoto/ItemPagePhoto';
@@ -10,7 +10,8 @@ class ItemPage extends Component {
 	constructor() {
 		super();
 		this.state = {
-			review: null
+			review: null,
+			star: null
 		};
 	}
 
@@ -32,14 +33,16 @@ class ItemPage extends Component {
 				<div id="ItemPgHeader">
 					<div id="IPHtitle">
 						<h1>{review.restaurant.name}</h1>
-						<div>{review.averageRating}</div>
+						<div>
+							<StarRating />
+						</div>
 						<a href="#">food styles</a>
 					</div>
-					<div>
+					<div className="btnWrapper">
 						<Link to={`/review/${this.props.id}`}>
-							<button>Write a Review</button>
+							<button id="wrBtn">★Write a Review</button>
 						</Link>
-						<button>Add Photo</button>
+						<button id="addPhoto">+Add Photo</button>
 					</div>
 				</div>
 				<div id="mapAndPhoto">
@@ -50,21 +53,28 @@ class ItemPage extends Component {
 				</div>
 				<div>
 					<div id="revHeader">
-						<h1>Recommended Reviews for {review.restaurant.name}</h1>
-						<input />
-						<button>검색</button>
-						<span>Sort by</span>
-						<select>
-							<option>Yelp Sort</option>
-							<option>Yelp Sort</option>
-							<option>Yelp Sort</option>
-							<option>Yelp Sort</option>
-						</select>
-						<span>Language</span>
-						<select>
-							<option>Korean</option>
-							<option>English</option>
-						</select>
+						<div id="hTag">
+							<h3 id="revH1">Recommended Reviews </h3>
+							<h3 id="h3"> for {review.restaurant.name}</h3>
+						</div>
+						<div id="searchAndSort">
+							<input id="revSearch" placeholder="Search within the reviews" />
+							<button id="revSearchBtn">검색</button>
+							<div id="sortBox">
+								<span>Sort by</span>
+								<select id="sel1">
+									<option>Yelp Sort</option>
+									<option>Yelp Sort</option>
+									<option>Yelp Sort</option>
+									<option>Yelp Sort</option>
+								</select>
+								<span id="sortLan">Language</span>
+								<select id="sel2">
+									<option>Korean</option>
+									<option>English</option>
+								</select>
+							</div>
+						</div>
 					</div>
 					<ItemReview id={review.restaurant.id} />
 				</div>
