@@ -1,51 +1,40 @@
 import React, { Component } from 'react';
-// import { GoogleComponent } from 'react-google-location';
-const API_KEY = 'AIzaSyBFqi0owVeH0-g16pWUbHFVhHj312bNUqA';
+import GoogleMapReact from 'google-map-react';
 
-class ItemMap extends Component {
-	constructor() {
-		super();
-		this.state = {
-			// address: props.item.address,
-			latitude: null,
-			longitude: null
-		};
-	}
-	// getGoogleMap() {
-	// 	const google = window.google;
-	// 	if (!this.googleMapsPromise) {
-	// 		this.googleMapsPromise = new Promise((resolve) => {
-	// 			window.resolveGoogleMapsPromise = () => {
-	// 				resolve(google);
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
-	// 				delete window.resolveGoogleMapsPromise;
-	// 			};
+class SimpleMap extends Component {
+	static defaultProps = {
+		center: {
+			lat: 37.5399238,
+			lng: 127.05075719999999
+		},
+		zoom: 15
+	};
 
-	// 			const script = document.createElement('script');
-	// 			const API = '';
-	// 			script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&callback=resolveGoogleMapsPromise`;
-	// 			script.async = true;
-	// 			document.body.appendChild(script);
-	// 		});
-	// 	}
-	// 	return this.googleMapsPromise;
-	// }
-	// componentWillMount() {
-	// 	this.getGoogleMap();
-	// }
-	// componentDidMount() {
-	// 	this.getGoogleMap().then((google) => {
-	// 	});
-	// }
-	// getLatAndIng() {
-	// }
 	render() {
 		return (
+			// Important! Always set the container height explicitly
 			<div>
-				<h1>이곳은 지도구역</h1>
+				<div style={{ height: '250px', width: '280px' }}>
+					{/* <div id="map"> */}
+					<GoogleMapReact
+						bootstrapURLKeys={{ key: 'AIzaSyDQ6w-m_-IigbaK1rRGMXr4kqJqmAJpBMc' }}
+						defaultCenter={this.props.center}
+						defaultZoom={this.props.zoom}
+					>
+						<AnyReactComponent lat={37.5399238} lng={127.05075719999999} text="★" />
+					</GoogleMapReact>
+				</div>
+				<div>
+					<p>167 W 74th</p>
+					<p>St New York, NY 10023</p>
+					<p> b/t Columbus Ave & Amsterdam Ave Upper West Side</p>
+					<p> Phone number (212) 874-6080</p>
+				</div>
 			</div>
 		);
 	}
 }
 
-export default ItemMap;
+export default SimpleMap;

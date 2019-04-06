@@ -1,15 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import StarRating from '../StarRating';
 import './CategoryListDetails.css';
 
 const CategoryListDetails = (props) => (
 	<div className="ItemWrapper">
 		<img src={props.item.src} className="itemImg" />
 		<div className="itemInfo">
-			<div>
+			<div id="details">
 				<div>
-					<Link to={`/item/${props.item.id}`}>{props.item.name}</Link>
+					<Link to={`/item/${props.item.id}`}>
+						<p id="cateTitle">{props.item.name}</p>
+					</Link>
 					<div>{props.item.averageRating}</div>
 					<p>$$ British, Fish & Chips, Seafood</p>
 				</div>
@@ -23,7 +24,7 @@ const CategoryListDetails = (props) => (
 				<p>It is a cute little place up on the hill.</p>
 			</div>
 			<div>
-				<button>Find a Table</button>
+				<button id="findTable">Find a Table</button>
 				<span>Offers reservatios</span>
 			</div>
 		</div>

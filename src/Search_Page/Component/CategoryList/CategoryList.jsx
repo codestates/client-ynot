@@ -44,7 +44,7 @@ class CategoryList extends Component {
 		const renderItems = currentItems.map((item, index) => {
 			console.log(item);
 			return (
-				<div>
+				<div id="categoryListWrapper">
 					<CategoryListDetails key={index} item={item} />
 				</div>
 			);

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './Footer.css';
 
-export default class Footer extends Component {
+class Footer extends Component {
 	render() {
 		return (
 			<div className="footerWrapper">
 				<ul className="footerUl">
-					About
+					<p>About</p>
 					<li>
 						<a href="#">About Yelp</a>
 					</li>
@@ -30,7 +30,7 @@ export default class Footer extends Component {
 					</li>
 				</ul>
 				<ul className="footerUl">
-					Discover
+					<p>Discover</p>
 					<li>
 						<a href="#">Yelp Project Cost Guides</a>
 					</li>
@@ -54,7 +54,7 @@ export default class Footer extends Component {
 					</li>
 				</ul>
 				<ul className="footerUl">
-					Yelp for Business Owners
+					<p>Yelp for Business Owners</p>
 					<li>
 						<a href="#">Claim your Business Page</a>
 					</li>
@@ -84,3 +84,5 @@ export default class Footer extends Component {
 		);
 	}
 }
+
+export default Footer;

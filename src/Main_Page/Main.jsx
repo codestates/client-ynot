@@ -24,12 +24,12 @@ class Main extends Component {
 	}
 
 	componentDidMount() {
-		if (!this.state.generateData) {
-			fetch('http://localhost:3002/generateData');
-			this.setState({
-				generateData: true
-			});
-		}
+		// if (!this.state.generateData) {
+		// 	fetch('http://localhost:3002/generateData');
+		// 	this.setState({
+		// 		generateData: true
+		// 	});
+		// }
 		this._getTodayReview();
 		this._getTop9RecentActivities();
 		this._triggerFetchRestaurantsNearby();

@@ -1,21 +1,84 @@
 #ItemPgWrapper {
-	padding: 0 20% 0 20%;
+	padding: 0 25% 0 25%;
 }
 #ItemPgHeader {
 	display: flex;
-	border: 1px solid lightgray;
+	padding-top: 20px;
 }
 #IPHtitle {
 	padding-right: 150px;
-	border-right: 1px solid lightgray;
 }
 #mapAndPhoto {
 	display: flex;
-	border: 1px solid lightgray;
 }
 #mapWrapper {
-	border-right: 1px solid lightgray;
-}
-#revHeader {
 	border: 1px solid lightgray;
+	padding: 8px;
+	width: 300px;
+}
+
+#revHeader {
+	padding: 50px 0 15px 0;
+}
+.btnWrapper {
+	position: relative;
+	left: 390px;
+}
+#wrBtn {
+	background-color: rgb(193, 23, 23);
+	color: white;
+	border: none;
+	height: 37px;
+	width: 150px;
+	position: relative;
+	top: 30px;
+	font-size: 15px;
+	font-weight: bold;
+	border-radius: 4px;
+}
+#addPhoto {
+	border: 0.3px solid rgb(196, 194, 194);
+	background-color: white;
+	position: relative;
+	height: 30px;
+	width: 100px;
+	top: 31px;
+	left: 15px;
+}
+#revH1 {
+	color: rgb(193, 23, 23);
+	font-weight: bold;
+}
+#hTag {
+	display: flex;
+}
+#hTag #h3 {
+	margin-left: 10px;
+}
+#searchAndSort {
+	display: flex;
+}
+#revSearch {
+	width: 250px;
+	height: 30px;
+	padding-left: 10px;
+}
+#revSearchBtn {
+	background-color: rgb(193, 23, 23);
+	border: none;
+	color: white;
+}
+#sortBox {
+	position: relative;
+	left: 380px;
+	top: 13px;
+}
+#sortLan {
+	margin-left: 15px;
+}
+#sel1,
+#sel2 {
+	border: none;
+	font-weight: bold;
+	margin-left: 10px;
 }
